@@ -10,7 +10,7 @@ namespace LogicalProgrammingPracticeProb
             bool isExit = false;
             while (!isExit)
             {
-                Console.WriteLine("Choose 1.FibonacciSeries 2.PerfectNumber 3.PrimeNumber 4.ReverseNumber 5.CouponNumber");
+                Console.WriteLine("Choose 1.FibonacciSeries 2.PerfectNumber 3.PrimeNumber 4.ReverseNumber 5.CouponNumber 6.StimulateStopWatch");
                 options = Convert.ToInt32(Console.ReadLine());
                 try
                 {
@@ -31,6 +31,9 @@ namespace LogicalProgrammingPracticeProb
                             break;
                         case 5:CouponNumber couponNumber = new CouponNumber();
                             couponNumber.PrintCouponNumber(3);
+                            break;
+                        case 6:StimulateStopWatch stimulateStopWatch = new StimulateStopWatch();
+                            stimulateStopWatch.PrintElapseTime();
                             break;
                         default:
                             isExit = true;
