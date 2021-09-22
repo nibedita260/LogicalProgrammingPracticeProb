@@ -10,7 +10,7 @@ namespace LogicalProgrammingPracticeProb
             bool isExit = false;
             while (!isExit)
             {
-                Console.WriteLine("Choose 1.FibonacciSeries");
+                Console.WriteLine("Choose 1.FibonacciSeries 2.PerfectNumber");
                 options = Convert.ToInt32(Console.ReadLine());
                 try
                 {
@@ -19,6 +19,9 @@ namespace LogicalProgrammingPracticeProb
                         case 1:
                             FibonacciSeries fibonacciSeries = new FibonacciSeries();
                             fibonacciSeries.PrintFibonacciNum(0,1,1,15);
+                            break;
+                        case 2:PerfectNumber perfectNumber = new PerfectNumber();
+                            perfectNumber.CheckPerfectNum(28);
                             break;
                         default:
                             isExit = true;
