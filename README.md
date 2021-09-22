@@ -1,0 +1,2 @@
+# LogicalProgrammingPracticeProb
+Logical Programming Practice Problems
