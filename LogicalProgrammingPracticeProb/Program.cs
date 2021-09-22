@@ -10,7 +10,7 @@ namespace LogicalProgrammingPracticeProb
             bool isExit = false;
             while (!isExit)
             {
-                Console.WriteLine("Choose 1.FibonacciSeries 2.PerfectNumber 3.PrimeNumber 4.ReverseNumber 5.CouponNumber 6.StimulateStopWatch");
+                Console.WriteLine("Choose 1.FibonacciSeries 2.PerfectNumber 3.PrimeNumber 4.ReverseNumber 5.CouponNumber 6.StimulateStopWatch 7.DayOfWeek");
                 options = Convert.ToInt32(Console.ReadLine());
                 try
                 {
@@ -34,6 +34,9 @@ namespace LogicalProgrammingPracticeProb
                             break;
                         case 6:StimulateStopWatch stimulateStopWatch = new StimulateStopWatch();
                             stimulateStopWatch.PrintElapseTime();
+                            break;
+                        case 7:DayOfWeek dayOfWeek = new DayOfWeek();
+                            dayOfWeek.PrintDayOfWeek(1,4,1995);
                             break;
                         default:
                             isExit = true;
