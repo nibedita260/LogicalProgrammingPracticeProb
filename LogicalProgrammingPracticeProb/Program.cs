@@ -10,7 +10,7 @@ namespace LogicalProgrammingPracticeProb
             bool isExit = false;
             while (!isExit)
             {
-                Console.WriteLine("Choose 1.FibonacciSeries 2.PerfectNumber 3.PrimeNumber 4.ReverseNumber");
+                Console.WriteLine("Choose 1.FibonacciSeries 2.PerfectNumber 3.PrimeNumber 4.ReverseNumber 5.CouponNumber");
                 options = Convert.ToInt32(Console.ReadLine());
                 try
                 {
@@ -28,6 +28,9 @@ namespace LogicalProgrammingPracticeProb
                             break;
                         case 4:ReverseNumber reverseNumber = new ReverseNumber();
                             reverseNumber.PrintReverseofNum(121);
+                            break;
+                        case 5:CouponNumber couponNumber = new CouponNumber();
+                            couponNumber.PrintCouponNumber(3);
                             break;
                         default:
                             isExit = true;
