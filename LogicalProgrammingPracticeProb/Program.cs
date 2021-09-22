@@ -10,7 +10,7 @@ namespace LogicalProgrammingPracticeProb
             bool isExit = false;
             while (!isExit)
             {
-                Console.WriteLine("Choose 1.FibonacciSeries 2.PerfectNumber 3.PrimeNumber 4.ReverseNumber 5.CouponNumber 6.StimulateStopWatch 7.DayOfWeek");
+                Console.WriteLine("Choose 1.FibonacciSeries 2.PerfectNumber 3.PrimeNumber 4.ReverseNumber 5.CouponNumber 6.StimulateStopWatch 7.DayOfWeek 8.VendorMachine");
                 options = Convert.ToInt32(Console.ReadLine());
                 try
                 {
@@ -37,6 +37,9 @@ namespace LogicalProgrammingPracticeProb
                             break;
                         case 7:DayOfWeek dayOfWeek = new DayOfWeek();
                             dayOfWeek.PrintDayOfWeek(1,4,1995);
+                            break;
+                        case 8:VendingMachine vendorMachine = new VendingMachine();
+                            vendorMachine.MinNumberOfNote(100);
                             break;
                         default:
                             isExit = true;
