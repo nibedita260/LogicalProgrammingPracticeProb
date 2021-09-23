@@ -1,35 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
-
+using System.Threading;
 
 namespace LogicalProgrammingPracticeProb
 {
     class StimulateStopWatch
     {
-        private static readonly int Elapsed;
-
         public void PrintElapseTime()
         {
-            StimulateStopWatch timer = new StimulateStopWatch();
+            Stopwatch timer = new Stopwatch();
             timer.Start();
-            for(int i = 1; i < 1000; i++)
+            for (int i = 0; i < 1000; i++)
             {
-                if (i == 200)
-                    break;
+                Thread.Sleep(5);
             }
             timer.Stop();
-            Console.WriteLine("Time elapsed: {0:hh\\:mm\\:ss}", StimulateStopWatch.Elapsed);
-        }
-
-        private object Stop()
-        {
-            throw new NotImplementedException();
-        }
-
-        private void Start()
-        {
-            throw new NotImplementedException();
+            Console.WriteLine("Time elapsed: {0:hh\\:mm\\:ss}", timer.Elapsed);
         }
     }
 }
