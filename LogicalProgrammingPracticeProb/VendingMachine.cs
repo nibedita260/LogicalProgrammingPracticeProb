@@ -9,28 +9,32 @@ namespace LogicalProgrammingPracticeProb
         public void MinNumberOfNote(int change)
         {
             int[] arr = {1000,500,100,50,10,5,2,1};
-            int largest = arr[0];
+            int[] notes = new int[8];
             int count = 0;
             Console.WriteLine("input is " + change);
             for (int i = 0; i < arr.Length; i++)
             {
-                if (change == arr[0])
+                while (change / arr[i] != 0)
                 {
-                    Console.Write("largest value of the Note to return change to get to minimum" + count + " number of Notes" + largest);
-                    //MinNumberOfNote(largest);
-                    break;
-                }
-                for (int j = i + 1; j < i; j++)
-                {
-                    if (arr[j]+arr[i]==change)
+                    if (arr[i] == 1000 || arr[i] == 100 || arr[i] == 10)
                     {
-                        largest = arr[j] + arr[i];
-                        count++;
-                        Console.Write("value of the Note to return change to get to minimum" + count + " number of Notes" + largest);
+                        notes[i]=change/arr[i];
+                        change %= arr[i];
+                    }
+                    else
+                    {
+                        notes[i] = ++count;
+                        change %= arr[i];
                     }
                 }
+                count = 0;
             }
-            Console.Write("value of the Note to return change to get to minimum "+ count+" number of Notes :" + largest);
+            for(int i = 0; i < notes.Length; i++)
+            {
+                count += notes[i];
+                Console.WriteLine("Number of Rs. " + arr[i] + " Number of Notes needed :" + notes[i]);
+            }
+            Console.WriteLine("total number of minimum notes needed to return change " + count );
             Console.WriteLine(" ");
         }
     }

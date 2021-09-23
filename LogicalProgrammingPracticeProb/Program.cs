@@ -39,7 +39,7 @@ namespace LogicalProgrammingPracticeProb
                             dayOfWeek.PrintDayOfWeek(1,4,1995);
                             break;
                         case 8:VendingMachine vendorMachine = new VendingMachine();
-                            vendorMachine.MinNumberOfNote(100);
+                            vendorMachine.MinNumberOfNote(1000);
                             break;
                         default:
                             isExit = true;
