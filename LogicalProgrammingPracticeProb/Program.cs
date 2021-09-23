@@ -44,6 +44,9 @@ namespace LogicalProgrammingPracticeProb
                         case 9:TemperatureConversion temperatureConversion = new TemperatureConversion();
                             temperatureConversion.CalTemp(35,"farahenite");
                             break;
+                        case 10:MonthlyPayment monthlyPayment = new MonthlyPayment();
+                            monthlyPayment.CalMonthlyPayment(597000,5,9.8);
+                            break;
                         default:
                             isExit = true;
                             break;
@@ -53,7 +56,6 @@ namespace LogicalProgrammingPracticeProb
                 {
                     Console.WriteLine("Choose valid option");
                 }
-                
             }
         }
                 
