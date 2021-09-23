@@ -41,6 +41,9 @@ namespace LogicalProgrammingPracticeProb
                         case 8:VendingMachine vendorMachine = new VendingMachine();
                             vendorMachine.MinNumberOfNote(1000);
                             break;
+                        case 9:TemperatureConversion temperatureConversion = new TemperatureConversion();
+                            temperatureConversion.CalTemp(35,"farahenite");
+                            break;
                         default:
                             isExit = true;
                             break;
