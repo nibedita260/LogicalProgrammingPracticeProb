@@ -10,7 +10,7 @@ namespace LogicalProgrammingPracticeProb
             bool isExit = false;
             while (!isExit)
             {
-                Console.WriteLine("Choose 1.FibonacciSeries 2.PerfectNumber 3.PrimeNumber 4.ReverseNumber 5.CouponNumber 6.StimulateStopWatch 7.DayOfWeek 8.VendorMachine 9.TemperatureConversion 10.MonthlyPayment 11.SqrtOfNum 12.ToBinary");
+                Console.WriteLine("Choose 1.FibonacciSeries 2.PerfectNumber 3.PrimeNumber 4.ReverseNumber 5.CouponNumber 6.StimulateStopWatch 7.DayOfWeek 8.VendorMachine 9.TemperatureConversion 10.MonthlyPayment 11.SqrtOfNum 12.ToBinary 13.BinarySwapNibblesAndResultantNumber");
                 options = Convert.ToInt32(Console.ReadLine());
                 try
                 {
@@ -52,6 +52,9 @@ namespace LogicalProgrammingPracticeProb
                             break;
                         case 12:ToBinary toBinary = new ToBinary();
                             toBinary.CalToBinary(14);
+                            break;
+                        case 13:BinarySwapNibblesAndResultantNumber nibblesAndResultantNumber = new BinarySwapNibblesAndResultantNumber();
+                            nibblesAndResultantNumber.PrintSwapNumAndResultantNum();
                             break;
                         default:
                             isExit = true;
