@@ -6,22 +6,21 @@ namespace LogicalProgrammingPracticeProb
 {
     class BinarySwapNibblesAndResultantNumber
     {
-        public void PrintSwapNumAndResultantNum()
-        {   
-            //get binary number from ToBinary class
-            int binaryNum=GetBinaryNumber(5);
+        public void PrintSwapNumAndResultantNum(int n)
+        {
+            //get binary string value from ToBinary class
+            string nibble = GetBinaryNumber(n);//5
             //1.->>>> Swap nibbles(8-bit binary number) and find a new number
-            string nibble = "0000" + binaryNum;
             Console.WriteLine("The 8-Bit of binary number is:" + nibble);
             string nibble1 = nibble.Substring(0, 4);
-            int nibbl1 = Int32.Parse(nibble1);
-            string nibble2 = nibble.Substring(nibble.Length-4);
-            int nibbl2 = Int32.Parse(nibble2);
-            Console.WriteLine("Before Swapping the two nibbles are:" + nibbl1+","+nibbl2);
-            nibbl1 +=  nibbl2;
-            nibbl2 -=  nibbl1;
-            nibbl1 -=  nibbl2;
-            Console.WriteLine("After Swapping the two nibbles are:" + nibbl1 + "," + nibbl2);
+            int nibbl1 = Int16.Parse(nibble1);//1010
+            string nibble2 = nibble.Substring(nibble.Length - 4);
+            int nibbl2 = Int16.Parse(nibble2);//0
+            Console.WriteLine("Before Swapping the two nibbles are:" + nibbl1 + "," + nibbl2);//1010,0
+            nibbl1 += nibbl2;//1010
+            nibbl2 += nibbl1;//1010
+            nibbl1 -= nibbl2;//0
+            Console.WriteLine("After Swapping the two nibbles are:" + nibbl1 + "," + nibbl2);//0,1010
             string nibl1 = nibbl1.ToString();
             string nibl2 = nibbl2.ToString();
             string resultant = nibl1 + nibl2;
@@ -41,10 +40,10 @@ namespace LogicalProgrammingPracticeProb
             Console.Write("\nDecimal Number: " + decimalNum);
             Console.WriteLine("  ");
         }
-        private static int GetBinaryNumber(int n)
+        private static string GetBinaryNumber(int n)
         {
             ToBinary toBinary = new ToBinary();
-            int binaryNum=toBinary.CalToBinary(n);
+            string binaryNum = toBinary.CalToBinary(n);
             return binaryNum;
         }
     }
