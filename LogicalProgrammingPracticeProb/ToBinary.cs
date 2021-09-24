@@ -36,6 +36,5 @@ namespace LogicalProgrammingPracticeProb
             Console.WriteLine("");
             return bin;
         }
-
     }
 }
