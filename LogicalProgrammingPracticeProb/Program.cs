@@ -51,10 +51,10 @@ namespace LogicalProgrammingPracticeProb
                             sqrtOfNum.CalSqrtOfNum(100);
                             break;
                         case 12:ToBinary toBinary = new ToBinary();
-                            toBinary.CalToBinary(14);
+                            toBinary.CalToBinary(5);
                             break;
                         case 13:BinarySwapNibblesAndResultantNumber nibblesAndResultantNumber = new BinarySwapNibblesAndResultantNumber();
-                            nibblesAndResultantNumber.PrintSwapNumAndResultantNum();
+                            nibblesAndResultantNumber.PrintSwapNumAndResultantNum(5);
                             break;
                         default:
                             isExit = true;
